@@ -1,0 +1,29 @@
+{
+  "name": "electron_autoupdate_example",
+  "version": "1.0.0",
+  "description": "An example for the automatic update functionality of electron",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vyperus/electron_autoupdate_example.git"
+  },
+  "keywords": [
+    "electron",
+    "example",
+    "autoUpdater",
+    "update",
+    "github"
+  ],
+  "author": "Bastian Schnittger",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Vyperus/electron_autoupdate_example/issues"
+  },
+  "homepage": "https://github.com/Vyperus/electron_autoupdate_example#readme",
+  "dependencies": {
+    "electron": "^1.7.10"
+  }
+}
