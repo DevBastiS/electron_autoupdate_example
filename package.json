@@ -13,7 +13,7 @@
   "scripts": {
     "start": "electron .",
     "build": "build",
-    "ship": "build -p always"
+    "shipit": "build -p always"
   },
   "repository": {
     "type": "git",

@@ -7,19 +7,19 @@
 
     <h2>This is version 1.0.0!!</h2>
 
-    <button id="rdy-button" type="button" onClick="ipcRenderer.send('quitAndInstall')">Update Ready</button>
+    <button disabled id="rdy-button" type="button" onClick="ipcRenderer.send('quitAndInstall')">Update Ready</button>
 
   </body>
 
   <script>
     const ipcRenderer = require('electron').ipcRenderer;
-    ipcRenderer.on('update-available', function(event, text) {
-        console.log('update-available');
+    ipcRenderer.on('update-downloaded', function(event, text) {
+        console.log('update-downloaded');
         var container = document.getElementById('rdy-button');
         container.removeAttribute('disabled');
     })
-    ipcRenderer.on('update-found', function(event, text) {
-      console.log('update-found')
+    ipcRenderer.on('update-available', function(event, text) {
+      console.log('update-available')
     })
     ipcRenderer.on('error', function(event, text) {
       console.log('error', text)
