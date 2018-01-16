@@ -1,6 +1,6 @@
 {
   "name": "electron_autoupdate_example",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An example for the automatic update functionality of electron",
   "main": "index.js",
   "build": {
