@@ -3,8 +3,17 @@
   "version": "1.0.0",
   "description": "An example for the automatic update functionality of electron",
   "main": "index.js",
+  "build": {
+    "publish": [{
+        "provider": "github",
+        "owner": "Vyperus",
+        "repo": "electron_autoupdate_example"
+    }]
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron .",
+    "build": "build",
+    "ship": "build -p always"
   },
   "repository": {
     "type": "git",
@@ -24,6 +33,10 @@
   },
   "homepage": "https://github.com/Vyperus/electron_autoupdate_example#readme",
   "dependencies": {
-    "electron": "^1.7.10"
+    "electron-updater": "^2.18.2"
+  },
+  "devDependencies": {
+    "electron": "^1.7.10",
+    "electron-builder": "^19.52.1"
   }
 }

@@ -6,5 +6,29 @@
     <h1>Hello Update Example!</h1>
 
     <h2>This is version 1.0.0!!</h2>
+
+    <button id="rdy-button" type="button" onClick="ipcRenderer.send('quitAndInstall')">Update Ready</button>
+
   </body>
+
+  <script>
+    const ipcRenderer = require('electron').ipcRenderer;
+    ipcRenderer.on('update-available', function(event, text) {
+        console.log('update-available');
+        var container = document.getElementById('rdy-button');
+        container.removeAttribute('disabled');
+    })
+    ipcRenderer.on('update-found', function(event, text) {
+      console.log('update-found')
+    })
+    ipcRenderer.on('error', function(event, text) {
+      console.log('error', text)
+    })
+    ipcRenderer.on('prog-made', function(event, text) {
+      console.log('prog-made')
+    })
+    ipcRenderer.on('update-not-available', function(event, text) {
+      console.log('update-not-available')
+    })
+</script>
 </html>
